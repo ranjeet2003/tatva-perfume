@@ -8,26 +8,38 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
 }
-
+*/
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: var(--red-hat-display), sans-serif; /* Fallback font */
 }
 
-@layer utilities {
+/* @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}  */
+.sRt {
+  unicode-bidi: bidi-override;
+  color: #ccc;
+  margin: 0;
+  padding: 0;
+}
+.sRt .flsRt {
+  color: #fdc12a;
+  padding: 0;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+}
+.sRt .emsRt {
+  padding: 0;
+  display: block;
+  z-index: 0;
 }
